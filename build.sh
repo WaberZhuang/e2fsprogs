@@ -18,7 +18,7 @@ cd build
     --disable-uuidd --disable-fuse2fs --disable-fsck --disable-e2initrd-helper \
     CFLAGS="-fPIC -O3" CXXFLAGS="-fPIC -O3" --prefix=`pwd`/${VERSION}
 make -j8
-sudo make install
+make install-libs
 
 mkdir libext2fs libext2fs/include libext2fs/lib
 cp -r ${VERSION}/include/ext2fs libext2fs/include
